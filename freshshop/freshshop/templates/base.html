@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site Metas -->
-    <title>Freshshop - Ecommerce Bootstrap 4 HTML Template</title>
+    <title>Freshshop - {{ page_name }}</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -43,6 +43,7 @@
     {% include 'base/main_top.html' %}
     {% include 'base/header.html' %}
     {% include 'base/top_search.html' %}
+    {% include 'base/all_title.html' %}
     
     {% block sitemap %}{% endblock sitemap %}
     {% block home %}{% endblock home %}

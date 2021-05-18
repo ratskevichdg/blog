@@ -2,16 +2,20 @@ from django.shortcuts import render
 
 
 def home(request):
-    return render(request, "home.html", {})
+    context = {"page_name": "home"}
+    return render(request, "home.html", context)
 
 
 def about(request):
-    return render(request, "about.html", {})
+    context = {"page_name": "about us"}
+    return render(request, "about.html", context)
 
 
 def contacts(request):
-    return render(request, "contacts.html", {})
+    context = {"page_name": "contacts"}
+    return render(request, "contacts.html", context)
 
 
 def gallery(request):
-    return render(request, "gallery.html", {})
+    context = {"page_name": "gallery"}
+    return render(request, "gallery.html", context)

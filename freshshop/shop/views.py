@@ -2,24 +2,30 @@ from django.shortcuts import render
 
 
 def shop(request):
-    return render(request, "shop.html", {})
+    context = {"page_name": "shop"}
+    return render(request, "shop.html", context)
 
 
 def shop_detail(request):
-    return render(request, "shop_detail.html", {})
+    context = {"page_name": "shop detail"}
+    return render(request, "shop_detail.html", context)
 
 
 def cart(request):
-    return render(request, "cart.html", {})
+    context = {"page_name": "cart"}
+    return render(request, "cart.html", context)
 
 
 def checkout(request):
-    return render(request, "checkout.html", {})
+    context = {"page_name": "checkout"}
+    return render(request, "checkout.html", context)
 
 
 def my_account(request):
-    return render(request, "my_account.html", {})
+    context = {"page_name": "my account"}
+    return render(request, "my_account.html", context)
 
 
 def wishlist(request):
-    return render(request, "wishlist.html", {})
+    context = {"page_name": "wishlist"}
+    return render(request, "wishlist.html", context)
