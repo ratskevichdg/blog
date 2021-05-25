@@ -5,8 +5,7 @@
         <div class="container">
             <!-- Start Header Navigation -->
             <div class="navbar-header">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu"
-                    aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand" href="index.html"><img src="{% static 'images/logo.png' %}" class="logo" alt=""></a>
@@ -38,6 +37,24 @@
             <!-- Start Atribute Navigation -->
             <div class="attr-nav">
                 <ul>
+                    <li>
+                    {% if not user.is_anonymous %}
+                        <a href="{% url 'logout_page' %}">
+                                {{ user }}
+                        </a>
+                    {% else %}
+                    <li class="">
+                        <a href="{% url 'login_page' %}">
+                            Login 
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="{% url 'signin_page' %}">
+                            Signin
+                        </a>
+                    </li>
+                    {% endif %}
+                    </li>
                     <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
                     <li class="side-menu">
                         <a href="#">

@@ -42,8 +42,6 @@
 <body>
     {% include 'base/main_top.html' %}
     {% include 'base/header.html' %}
-    {% include 'base/top_search.html' %}
-    {% include 'base/all_title.html' %}
     
     {% block sitemap %}{% endblock sitemap %}
     {% block home %}{% endblock home %}
@@ -55,6 +53,8 @@
     {% block checkout %}{% endblock checkout %}
     {% block my_account %}{% endblock my_account %}
     {% block gallery %}{% endblock gallery %}
+    {% block user %}{% endblock user %}
+    {% block signin %}{% endblock signin %}
 
     {% include "base/insta_box.html" %}
     {% include "base/footer.html" %}
